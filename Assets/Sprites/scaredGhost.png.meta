@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: aa49d451a8d7540e487e0facd8cc1f4b
+guid: 0c65b60f33d7f411bbc32540068f06eb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PacBot_0
+      name: scaredGhost_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 142
-        width: 116
-        height: 100
+        x: 20
+        y: 136
+        width: 88
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,20 +120,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c95d3ca0f0dc4bdc99ed5bfcde4243e
-      internalID: 613352605
+      spriteID: 31f5864c9f76849d399c2cee8d6cae71
+      internalID: -1324076231
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacBot_1
+      name: scaredGhost_1
       rect:
         serializedVersion: 2
-        x: 6
-        y: 14
-        width: 116
-        height: 100
+        x: 20
+        y: 8
+        width: 88
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b8d8026499134ba19db4d226a98024d
-      internalID: -2106918991
+      spriteID: eac2dd0ce563a40a4b35e2d8456d4737
+      internalID: 1592851192
       vertices: []
       indices: 
       edges: []
@@ -158,8 +158,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PacBot_1: -2106918991
-      PacBot_0: 613352605
+      scaredGhost_0: -1324076231
+      scaredGhost_1: 1592851192
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: aa49d451a8d7540e487e0facd8cc1f4b
+guid: f25dae8d59a4941a8916507061fc667c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PacBot_0
+      name: blueGhost_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 142
-        width: 116
-        height: 100
+        x: 20
+        y: 136
+        width: 88
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,20 +120,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c95d3ca0f0dc4bdc99ed5bfcde4243e
-      internalID: 613352605
+      spriteID: 52a0b645853464b3d8ccbebbd2da1270
+      internalID: -1588273435
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacBot_1
+      name: blueGhost_1
       rect:
         serializedVersion: 2
-        x: 6
-        y: 14
-        width: 116
-        height: 100
+        x: 20
+        y: 8
+        width: 88
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b8d8026499134ba19db4d226a98024d
-      internalID: -2106918991
+      spriteID: 6d4916629db7f49ee845d43c674ea37b
+      internalID: -1744219737
       vertices: []
       indices: 
       edges: []
@@ -158,8 +158,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PacBot_1: -2106918991
-      PacBot_0: 613352605
+      blueGhost_0: -1588273435
+      blueGhost_1: -1744219737
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

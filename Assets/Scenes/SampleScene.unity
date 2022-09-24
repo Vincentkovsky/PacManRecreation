@@ -244,6 +244,12 @@ MonoBehaviour:
   sprites:
   - {fileID: 613352605, guid: aa49d451a8d7540e487e0facd8cc1f4b, type: 3}
   - {fileID: -2106918991, guid: aa49d451a8d7540e487e0facd8cc1f4b, type: 3}
+  deathSprites:
+  - {fileID: -48198105, guid: 2261869164a1544c69c7953b5de19b95, type: 3}
+  - {fileID: 590582569, guid: 2261869164a1544c69c7953b5de19b95, type: 3}
+  - {fileID: 64484776, guid: 2261869164a1544c69c7953b5de19b95, type: 3}
+  - {fileID: -906587324, guid: 2261869164a1544c69c7953b5de19b95, type: 3}
+  - {fileID: 1147351, guid: 2261869164a1544c69c7953b5de19b95, type: 3}
   time: 0.25
   loop: 1
 --- !u!58 &657888928
@@ -362,6 +368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a0a4d8d504834ab4a736126dbd3fed4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animation: {fileID: 0}
 --- !u!114 &657888933
 MonoBehaviour:
   m_ObjectHideFlags: 0

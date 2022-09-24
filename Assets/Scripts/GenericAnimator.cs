@@ -8,6 +8,7 @@ public class GenericAnimator : MonoBehaviour
     public SpriteRenderer sr {get; private set;}
 
     public Sprite[] sprites;
+    public Sprite[] deathSprites;
 
     public float time = 0.25f;
     public int frame{get;private set;}

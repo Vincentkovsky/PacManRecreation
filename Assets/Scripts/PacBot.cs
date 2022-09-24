@@ -6,10 +6,12 @@ using UnityEngine;
 public class PacBot : MonoBehaviour
 {
     public Movement move{get;private set;}
+    public GenericAnimator animation;
 
     void Awake()
     {
         this.move = GetComponent<Movement>();
+        this.animation = GetComponent<GenericAnimator>();
     }
 
     // Update is called once per frame
@@ -26,12 +28,20 @@ public class PacBot : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.D)){
             this.move.SetDir(Vector2.right);
+            this.die();
         }
+
+
         float rotationAngle = Mathf.Atan2(this.move.dir.y, this.move.dir.x);
         if(rotationAngle*Mathf.Rad2Deg == 180.0f){
             this.transform.rotation = Quaternion.Euler(new Vector3(0.0f, 180.0f, 0.0f));
         }else{
             this.transform.rotation = Quaternion.Euler(new Vector3(0.0f, 0.0f, rotationAngle*Mathf.Rad2Deg));
         }
+    }
+
+    public void die(){
+        this.animation.sprites = this.animation.deathSprites;
+        this.animation.loop = false;
     }
 }

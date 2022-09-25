@@ -28,4 +28,10 @@ public class Movement : MonoBehaviour
         this.nextDir = Vector2.zero;
     }
 
+    void FixedUpdate(){
+        Vector2 translation = this.dir * Time.fixedDeltaTime * this.speed * this.speedMultiplier;
+        Vector2 position = this.rd.position;
+        this.rd.MovePosition(position+translation);
+    }
+
 }

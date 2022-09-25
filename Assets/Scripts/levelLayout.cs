@@ -42,6 +42,9 @@ public class levelLayout : MonoBehaviour
         offset = 24/insideCorner.GetComponent<SpriteRenderer>().sprite.pixelsPerUnit;
         columns = map.GetLength(1);
         rows = map.GetLength(0);
+        Camera camera = Camera.main;
+        camera.transform.position = new Vector3(((float)columns + 1.0f)/2, ((float)-rows - 1.0f)/2, -2);
+        camera.orthographicSize = 15.0f;
     }
 
     void Start()

@@ -20,8 +20,8 @@ public class Movement : MonoBehaviour
         this.initialPos = this.transform.position;
     }
 
-    void Start(){
-    }
+    // void Start(){
+    // }
 
     public void SetDir(Vector2 inputDir){
         this.dir = inputDir;

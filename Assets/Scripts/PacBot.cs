@@ -7,17 +7,23 @@ public class PacBot : MonoBehaviour
 {
     public Movement move{get;private set;}
     public GenericAnimator anim;
+    public AudioSource pacBotAudio;
+    public AudioSource bgm;
 
     void Awake()
-    {
+    {   
+        this.bgm = GameObject.Find("bgm").GetComponent<AudioSource>();
         this.move = GetComponent<Movement>();
         this.anim = GetComponent<GenericAnimator>();
+        this.pacBotAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
         demoMove();
+        playAudio();
+        
         if(Input.GetKeyDown(KeyCode.A)){
             this.move.SetDir(Vector2.left);
         }
@@ -57,6 +63,15 @@ public class PacBot : MonoBehaviour
         }
         if(this.transform.position == new Vector3(-5,1,0)){
             this.move.SetDir(Vector2.up);
+        }
+    }
+
+    void playAudio(){
+        if(this.move.dir != Vector2.zero && !pacBotAudio.isPlaying){
+            pacBotAudio.Play();
+            bgm.volume = 0.1f;
+        }else{
+            bgm.volume = 1.0f;
         }
     }
 }

@@ -30,6 +30,9 @@ public class levelLayout : MonoBehaviour
     [SerializeField] private GameObject outsideWall;
     [SerializeField] private GameObject outsideCorner;
     [SerializeField] private GameObject junctionWall;
+    [SerializeField] private GameObject cherry;
+    [SerializeField] private GameObject pellet;
+    [SerializeField] private GameObject powerPellet;
 
     public int columns;
     public int rows;
@@ -59,6 +62,7 @@ public class levelLayout : MonoBehaviour
     }
 
     private void Initialize(){
+        GameObject PacBot = GameObject.Find("PacBot");
         for(int i = 0; i < rows; i++){
             for(int j = 0; j < columns; j++){
                 GameObject ele = null;
@@ -130,6 +134,14 @@ public class levelLayout : MonoBehaviour
                         }else if(j < columns-1 && (map[i-1,j] == 3 || map[i-1,j] == 4) && (map[i,j-1] == 0 || map[i,j-1]== 5 || map[i,j-1] ==6)){
                             ele.transform.rotation = Quaternion.Euler(new Vector3(0.0f,0.0f,90.0f));
                         }
+                        break;
+                    case 5:
+                        if(position != PacBot.transform.position){
+                            ele = Instantiate(pellet, position, Quaternion.identity, this.topLeftQuadrant.transform);
+                        }
+                        break;
+                    case 6:
+                        ele = Instantiate(powerPellet, position, Quaternion.identity, this.topLeftQuadrant.transform);
                         break;
                     case 7:
                         ele = Instantiate(junctionWall, position, Quaternion.identity, this.topLeftQuadrant.transform);

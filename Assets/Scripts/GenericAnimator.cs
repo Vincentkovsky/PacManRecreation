@@ -9,6 +9,8 @@ public class GenericAnimator : MonoBehaviour
 
     public Sprite[] sprites;
     public Sprite[] deathSprites;
+    public Sprite[] scaredSprites;
+    public Sprite[] recoveringSprites;
 
     public float time = 0.25f;
     public int frame{get;private set;}

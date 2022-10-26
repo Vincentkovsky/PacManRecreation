@@ -10,6 +10,9 @@ public class UIManager : MonoBehaviour
     public void LoadFirstLevel(){
         SceneManager.LoadScene(1);
     }
+    public void ExitGame(){
+        SceneManager.LoadScene(0);
+    }
 
     // Update is called once per frame
     void Update()

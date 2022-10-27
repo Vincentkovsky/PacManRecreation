@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
-   private int[,] map = {
+    private static int[,] _map = {
             {1,2,2,2,2,2,2,2,2,2,2,2,2,7}, 
             {2,5,5,5,5,5,5,5,5,5,5,5,5,4}, 
             {2,5,3,4,4,3,5,3,4,4,4,3,5,4}, 
@@ -21,6 +21,16 @@ public class LevelGenerator : MonoBehaviour
             {2,2,2,2,2,3,5,3,3,0,4,0,0,0}, 
             {0,0,0,0,0,0,5,0,0,0,4,0,0,0}, 
         };
+
+   public static int[,] map
+   {
+    get
+    {
+        return _map;
+    }
+   }
+
+    
 
     [SerializeField] private GameObject topLeftQuadrant;
     [SerializeField] private GameObject insideWall;

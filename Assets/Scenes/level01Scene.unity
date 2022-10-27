@@ -2142,6 +2142,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PacStudent: {fileID: 657888926}
+  audioClips:
+  - {fileID: 8300000, guid: 1b69bbccd838748d49f69ff049775aab, type: 3}
+  - {fileID: 8300000, guid: 1b69bbccd838748d49f69ff049775aab, type: 3}
+  - {fileID: 8300000, guid: 1cf2220dda4b84835bb39d728eb40945, type: 3}
+  eatPelletSource: {fileID: 657888934}
+  moveSource: {fileID: 657888934}
 --- !u!1 &713724165
 GameObject:
   m_ObjectHideFlags: 0

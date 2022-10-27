@@ -15,6 +15,9 @@ public class PacStudentController : MonoBehaviour
     private int rows;
     private int columnIndex;
     private int rowIndex;
+    public AudioClip[] audioClips;
+    public AudioSource eatPelletSource;
+    public AudioSource moveSource;
 
     void Awake()
     {
@@ -34,6 +37,23 @@ public class PacStudentController : MonoBehaviour
         }
         if(checkWalkable(dir)){
             move();
+        }
+        rotate();
+        AudioControl();
+    }
+
+    void rotate(){
+        if(dir == Vector2.up){
+            PacStudent.transform.rotation = Quaternion.Euler(0,0,90);
+        }
+        if(dir == Vector2.down){
+            PacStudent.transform.rotation = Quaternion.Euler(0,0,-90);
+        }
+        if(dir == Vector2.left){
+            PacStudent.transform.rotation = Quaternion.Euler(0,180,0);
+        }
+        if(dir == Vector2.right){
+            PacStudent.transform.rotation = Quaternion.Euler(0,0,0);
         }
     }
 
@@ -94,6 +114,75 @@ public class PacStudentController : MonoBehaviour
             setDir(Vector2.up);
         }else if(Input.GetKeyDown(KeyCode.S)){
             setDir(Vector2.down);
+        }
+    }
+
+    void AudioControl(){
+        if(dir != Vector2.zero){
+            switch (dir){
+                case Vector2 v when v.Equals(Vector2.left):
+                    switch (LevelMap[rowIndex, columnIndex - 1]){
+                        case 5:
+                            eatPelletSource.PlayOneShot(audioClips[0]);
+                            break;
+                        case 6:
+                            eatPelletSource.PlayOneShot(audioClips[1]);
+                            break;
+                        case 0:
+                            moveSource.PlayOneShot(audioClips[2]);
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                case Vector2 v when v.Equals(Vector2.right):
+                    switch (LevelMap[rowIndex, columnIndex + 1]){
+                        case 5:
+                            eatPelletSource.PlayOneShot(audioClips[0]);
+                            break;
+                        case 6:
+                            eatPelletSource.PlayOneShot(audioClips[1]);
+                            break;
+                        case 0:
+                            moveSource.PlayOneShot(audioClips[2]);
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                case Vector2 v when v.Equals(Vector2.up):
+                    switch (LevelMap[rowIndex - 1, columnIndex]){
+                        case 5:
+                            eatPelletSource.PlayOneShot(audioClips[0]);
+                            break;
+                        case 6:
+                            eatPelletSource.PlayOneShot(audioClips[1]);
+                            break;
+                        case 0:
+                            moveSource.PlayOneShot(audioClips[2]);
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                case Vector2 v when v.Equals(Vector2.down):
+                    switch (LevelMap[rowIndex + 1, columnIndex]){
+                        case 5:
+                            eatPelletSource.PlayOneShot(audioClips[0]);
+                            break;
+                        case 6:
+                            eatPelletSource.PlayOneShot(audioClips[1]);
+                            break;
+                        case 0:
+                            moveSource.PlayOneShot(audioClips[2]);
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

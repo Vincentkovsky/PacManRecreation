@@ -6,6 +6,7 @@ using System;
 
 public class PacStudentController : MonoBehaviour
 {
+    public ParticleSystem dust;
     [SerializeField]private GameObject PacStudent;
     Vector2 dir;
     Vector2 nextDir;
@@ -33,6 +34,7 @@ public class PacStudentController : MonoBehaviour
         rowIndex = -((int)position.y - (rows >> 1) + 1);
         getInput();
         if(checkWalkable(nextDir)){
+            playDust();
             dir = nextDir;
         }
         if(checkWalkable(dir)){
@@ -97,6 +99,7 @@ public class PacStudentController : MonoBehaviour
 
     void setDir(Vector2 direction){
         if(checkWalkable(direction)){
+            playDust();
             dir = direction;
             nextDir = Vector2.zero;
         }else{
@@ -184,5 +187,9 @@ public class PacStudentController : MonoBehaviour
                     break;
             }
         }
+    }
+
+    void playDust(){
+        dust.Play();
     }
 }
